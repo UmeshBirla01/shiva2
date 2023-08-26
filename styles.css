@@ -52,6 +52,7 @@ a {
 .wrapper {
   position: sticky;
   top: 0;
+  left: 0;
   z-index: 500;
   opacity: 1;
   background: white;
