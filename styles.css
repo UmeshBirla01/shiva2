@@ -43,7 +43,6 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .fixHead {
@@ -64,7 +63,7 @@ a {
 
 header div {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: space-between;
   font-weight: 500;
 }
@@ -90,6 +89,9 @@ nav {
 }
 nav h1 {
   font-size: 2.3rem;
+  color: rgb(228, 52, 52);
+  text-shadow: 1px 1px rgba(203, 141, 141, 0.721);
+  text-decoration: underline dotted;
 }
 
 .bookmarks ul {
@@ -102,14 +104,20 @@ nav h1 {
 
 .bookmarks ul li {
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
   /* transform: scale(1.05); */
   transition: 2s ease-in-out solid transparent;
+  text-decoration: underline 2px rgb(113, 113, 106);
+  color: #0a0a0a;
+  /* text-shadow: 1px 1px rgb(116, 121, 118); */
 }
 
 .bookmarks ul li:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: 2s ease-in-out solid;
+  text-decoration: underline 2px transparent;
 }
 /* main {
   background-color: green;
@@ -133,7 +141,10 @@ nav h1 {
   font-size: 200;
   font-weight: 500;
 }
-
+/* .support .right p {
+  color: rgb(83, 23, 23);
+  text-shadow: 1px 1px rgb(167, 131, 131);
+} */
 #home {
   display: flex;
   justify-content: center;
@@ -685,13 +696,18 @@ footer {
 }
 
 @media (max-width: 980px) {
+  .body {
+    margin: 0 50px 0 50px;
+  }
   #home {
     flex-wrap: wrap;
     padding: 7rem 0 7rem 0;
     gap: 6rem;
     margin: 3rem;
   }
+
   #home .menu {
+    width: 50%;
   }
   .feature2 img {
     height: 80%;
@@ -699,9 +715,6 @@ footer {
 }
 
 @media (max-width: 799px) {
-  .container {
-    padding: 3rem;
-  }
   header div {
     font-size: 1.7rem;
     flex-wrap: wrap;
@@ -802,9 +815,6 @@ footer {
 }
 
 @media (max-width: 564px) {
-  .container {
-    padding: 2rem;
-  }
   header div {
     font-size: 1.7rem;
     flex-wrap: wrap;
@@ -860,26 +870,27 @@ footer {
   }
   .logo h1 {
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .bookmarks ul {
     gap: 1rem;
     align-self: center;
     font-weight: 400;
-    margin-top: -10px;
+    margin-top: -0.7rem;
   }
 
   .bookmarks ul li {
     font-size: 15px;
     font-weight: 600;
+    /* text-decoration: underline 3px; */
   }
 
   .support .left {
     display: none;
   }
   .support .right p {
-    margin-top: -10px;
+    margin-top: -0.3rem;
     font-size: 1rem;
   }
 
@@ -942,9 +953,14 @@ footer {
     padding: 20px;
   }
 
-  #about-head img {
+  #about-head .about-img {
     margin-top: -5rem;
-    width: 100%;
+    width: 90%;
+    /* height: 10%; */
+  }
+  #about-head img {
+    margin-top: 2rem;
+    /* width: 20%; */
     /* height: 10%; */
   }
   #about-head div h2 {
@@ -960,7 +976,9 @@ footer {
   .roll {
     font-size: 1.4rem;
   }
-
+  #contact-details {
+    padding: 20px;
+  }
   #contact-details .details h2 {
     font-size: 1.5rem;
   }
